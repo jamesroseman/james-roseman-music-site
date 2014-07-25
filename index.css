@@ -9,6 +9,8 @@ html {
 	font-size: 50px;
 	color: white;
 	font-family: 'Open Sans', sans-serif;
+
+	min-width: 750px;
 }
 
 a {
@@ -23,6 +25,7 @@ a {
 	margin-top: 15px;
 	text-align: center;
 	font-size: 75px;
+	letter-spacing: -3;
 }
 
 .main-content {
@@ -38,32 +41,44 @@ a {
 	clear:left; 
 	font-size: 23px;
 	color: #888;
-	padding-top: 10px;
-	border-radius: 5px;
 	border: 1px solid #888;
 	opacity: 0.75;
+	padding: 15px;
+
+	height: 180px;
+
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 }
 
-input[type="email"] {
+#mc_embed_signup input.email {
 
 	font-size: 25px;
-	margin-top: 20px;
-	margin-bottom: 10px;
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 5px;
 }
 
-input.button {
-	display: inline-block;
-	font-size: 35px;
-	margin-bottom: 10px;
+#mc_embed_signup label {
+	text-align: center;
+
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -2px;
+}
+
+#mc_embed_signup input.button {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 25px;
 }
 
 .email-form {
+	margin: 45px auto 0 auto;
 	width: 35%;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 50px;
+	max-width: 450px;
 	text-align: center;
 }
 
@@ -75,13 +90,17 @@ input.button {
 
 .music-player-container {
 	width: 55%;
-	height: 450px;
+	max-width: 450px;
+	height: 400px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 50px;
-	border-radius: 4px;
 
 	border: 1px solid #888;
+
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
 }
 
 
@@ -90,4 +109,14 @@ input.button {
 	position: absolute;
 	bottom: 0;
 	left: 15px;
+}
+
+.attrib {
+	text-align: right;
+	width: 50px;
+	font-size: 12px;
+	opacity: 0.65;
+	position: absolute;
+	bottom: 0;
+	right: 10px;
 }
