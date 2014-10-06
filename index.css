@@ -25,42 +25,38 @@ a {
 	width: 700px;
 }
 
+.main-content {
+	width: 1072px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: auto;
+	padding-right: auto;
+}
+
 .left-col {
-	min-width: 400px;
-	background-color: #ddd;
-	width: 25%;
+	/*background-color: #ddd;*/
+	width: 272px;
 	height: 550px;
-	position: absolute;
-	left: 7%;
-	top: 155px;
+	float: left;
 }
 
 .right-col {
-	min-width: 700px;
-	background-color: #555;
-	width: 50%;
+	/*background-color: #555;*/
+	width: 700px;
 	height: 550px;
-	position: absolute;
-	right: 7%;
-	top: 155px;
-	z-index:1000;
-	margin-left: 4%;
+	margin-left: 372px;
 }
 
+.spacer {
+	height: 50px;
+}
 
 .intro {
 	width: 50%;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
-	margin-top: -75px;
-}
-
-.main-content {
-	width: 50%;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 3%;
+	margin-top: -25px;
 }
 
 
