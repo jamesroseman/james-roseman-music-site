@@ -1,5 +1,5 @@
 html {
-	background: url(https://s3.amazonaws.com/ooomf-com-files/IHLjdHdzSvi0rgUMMlSK_TE3_0286.jpg) no-repeat center center fixed;
+	background: url('background.jpg') no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -25,15 +25,35 @@ a {
 	width: 700px;
 }
 
+.left-col {
+	min-width: 400px;
+	background-color: #ddd;
+	width: 25%;
+	height: 550px;
+	position: absolute;
+	left: 7%;
+	top: 155px;
+}
+
+.right-col {
+	min-width: 700px;
+	background-color: #555;
+	width: 50%;
+	height: 550px;
+	position: absolute;
+	right: 7%;
+	top: 155px;
+	z-index:1000;
+	margin-left: 4%;
+}
+
 
 .intro {
 	width: 50%;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 50px;
 	text-align: center;
-	font-size: 75px;
-	letter-spacing: -3;
+	margin-top: -75px;
 }
 
 .main-content {
