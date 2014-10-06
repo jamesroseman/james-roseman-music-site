@@ -35,7 +35,7 @@ a {
 
 .left-col {
 	/*background-color: #ddd;*/
-	width: 272px;
+	max-width: 272px;
 	height: 550px;
 	float: left;
 }
