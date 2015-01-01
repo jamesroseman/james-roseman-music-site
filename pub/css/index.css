@@ -1,12 +1,17 @@
 html {
 	width: 100%;
+	min-width: 300px;
 	height: 100%;
+
+	overflow-y: hidden;
 
 	background-color: teal;
 }
 body {
 	width: 100%;
 	height: 100%;
+
+	overflow-y: hidden;
 }
 
 .noselect {
@@ -18,6 +23,10 @@ body {
     user-select: none;
 }
 
+
+/*
+	Backgrounds
+*/
 .full-photo {
 	position: absolute;
 	top: 0;
@@ -25,6 +34,10 @@ body {
 
 	width: 100%;
 	height: 100%;
+
+	background-size: auto auto;
+	background-repeat: no-repeat;
+	background-position: bottom -275px center;
 }
 .bg-news {
 	background-image: url("../img/bg/news-bg-photo.jpg");
@@ -39,6 +52,66 @@ body {
 	opacity: 0;
 }
 
+
+/*
+	Banner
+*/
+.banner {
+	width: 430px;
+	height: 255px;
+	margin: 40px auto 35px auto;
+	background-image: url("../img/fullname_banner.png");
+	background-size: 100% 100%;
+	display: block;
+}
+
+
+/*
+	Buttons
+*/
+.jr-group-btn {
+	width: 100%;
+	margin-bottom: 25px;
+	height: 45px;
+}
+.jr-btn {
+	float: left;
+	margin-left: 35px;
+	margin-right: 35px;
+	text-align: center;
+	padding: 10px 16px;
+	cursor: pointer;
+	width: 120px;
+	height: 45px;
+	font-size: 18px;
+	line-height: 1.33;
+	border: 1px solid white;
+	border-radius: 6px;
+	color: white;
+}
+.jr-btn:first-child {
+	margin: 0;
+}
+.jr-btn:last-child {
+	margin: 0;
+}
+.btn-news {
+	position: relative;
+	left: 0;
+}
+.btn-music {
+	position: relative;
+	left: 33%;
+}
+.btn-shows {
+	position: relative;
+	left: 66%;
+}
+
+
+/* 
+	Main content 
+*/
 .main-content {
 	margin-left: auto;
 	margin-right: auto;
@@ -49,64 +122,140 @@ body {
 
 	z-index: 1;
 }
+.jr-group-content {
+	width: 100%;
+	height: 40%;
 
-.banner {
-	padding-top: 30px;
-	padding-bottom: 50px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+
+	background-color: teal;
+}
+.content-news {
+	height: 10000px;
 }
 
-.group-btn {
+
+/*
+	Footer
+*/
+.footer {
+	width: 100%;
+	height: 70px;
+	background-color: white;
+	position: absolute;
+	bottom: 0;
+	opacity: 0.85;
+	z-index: 1000;
+	padding: 10px 0 0 0;
+}
+.footer-content {
 	margin-left: auto;
 	margin-right: auto;
 
-	width:  100%;
+	width: 430px;
 	height: 100%;
-
-	text-align: center;
 }
+.soc-media {
+	width: 50%;
+	height: 50px;
 
-.jr-btn {
-	float: left;
-
-	margin-left: 35px;
-	margin-right: 35px;
-
-	text-align: center;
-	padding: 10px 16px;
-	cursor: pointer;
+	background-color: teal;
 	
-	width: 120px;
-
-	font-size: 18px;
-	line-height: 1.33;
-
-	border: 1px solid white;
-	border-radius: 6px;
-
-	color: white;
-}
-
-.jr-btn:first-child {
-	margin-left: 0;
-	margin-right: 0;
-}
-
-.jr-btn:last-child {
-	margin-left: 0;
-	margin-right: 0;
-}
-
-.btn-news {
 	position: relative;
-	left: 0;
+	bottom: 0;
+}
+.soc-row-1 {
+	height: 25px;
+	width: 100px;
+}
+.soc-row-2 {
+	height: 25px;
+	width: 100px;
+}
+.soc-media-out {
+	position: relative;
+	float: left;
+	width: 25px;
+	height: 25px;
+
+	background-color: black;
 }
 
-.btn-music {
-	position: relative;
-	left: 33%;
-}
 
-.btn-shows {
-	position: relative;
-	left: 66%;
+/* 
+	Screen size media queries 
+*/
+
+/* Width too small */
+@media screen and (max-width: 430px) {
+	/*
+		Banner
+	*/
+	.banner {
+		width: 300px;
+		height: 178px;
+	}
+	/*
+		Buttons
+	*/
+	.jr-group-btn {
+		margin-bottom: 10px;
+		height: 38px;
+	}
+	.jr-btn {
+		margin-right: 15px;
+		margin-left: 15px;
+		width: 90px;
+		height: 38px;
+		padding: 8px 10px;
+	}
+	.jr-btn:first-child {
+		margin: 0;
+	}
+	.jr-btn:last-child {
+		margin: 0;
+	}
+	/*
+		Main content
+	*/
+	.main-content {
+		width: 300px;
+	}
+	/*
+		Footer
+	*/
+	.footer-content {
+		width: 300px;
+	}
+}
+/* Height too small */
+@media screen and (max-height: 650px) {
+	.jr-group-content {
+		height: 60%;
+	}
+	.banner {
+		background-image: url("../img/fullname_banner_short.png");
+		height: 40px;
+		margin-top: 15px;
+	}
+}
+/* Height too small for small logo */
+@media screen and (max-height: 650px) and (max-width: 430px) {
+	.banner {
+		height: 28px;
+		margin-bottom: 15px;
+	}
+}
+/* Landscape orientation */
+@media screen and (orientation: landscape) and (max-height: 500px) {
+	.banner {
+		margin-bottom: 5px;
+	}
+	.jr-group-btn {
+		margin-bottom: 5px;
+	}
+	.footer {
+		display: none;
+	}
 }
