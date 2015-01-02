@@ -136,7 +136,7 @@ body {
 	color: #000;
 }
 .content-bg {
-	opacity: 0.93;
+	opacity: 0.85;
 	background-color: #eee;
 	border: 1px solid white;
 	overflow-y: scroll;
@@ -161,7 +161,6 @@ body {
 	margin-right: auto;
 	width: 80%;
 	background-color: #2F7B87;
-	max-height: 300px;
 }
 .content-news-date {
 	padding: 5px;
