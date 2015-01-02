@@ -125,14 +125,28 @@ body {
 .jr-group-content {
 	width: 100%;
 	height: 40%;
-
-	overflow-y: scroll;
-	overflow-x: hidden;
-
-	background-color: teal;
+	overflow: hidden;
+	padding-top: 15px;
+	border-top: 1px solid white;
+}
+.content {
+	opacity: 0.9;
 }
 .content-news {
-	height: 10000px;
+	overflow-y: scroll;
+	display: block;
+}
+.content-music {
+	overflow: hidden;
+	display: none;
+}
+.content-shows {
+	opacity: 0.85;
+	background-color: #eee;
+	border: 1px solid white;
+	overflow-y: scroll;
+	padding-top: 10px;
+	display: none;
 }
 
 
@@ -142,12 +156,13 @@ body {
 .footer {
 	width: 100%;
 	height: 70px;
-	background-color: white;
+	background-color: #222;
 	position: absolute;
 	bottom: 0;
 	opacity: 0.85;
 	z-index: 1000;
 	padding: 10px 0 0 0;
+	border-top: 1px solid #111;
 }
 .footer-content {
 	margin-left: auto;
@@ -157,31 +172,52 @@ body {
 	height: 100%;
 }
 .soc-media {
-	width: 50%;
+	width: 100%;
 	height: 50px;
-
-	background-color: teal;
-	
 	position: relative;
 	bottom: 0;
-}
-.soc-row-1 {
-	height: 25px;
-	width: 100px;
-}
-.soc-row-2 {
-	height: 25px;
-	width: 100px;
 }
 .soc-media-out {
 	position: relative;
 	float: left;
-	width: 25px;
-	height: 25px;
-
+	width: 50px;
+	height: 50px;
 	background-color: black;
+	cursor: pointer;
+}
+.facebook-out:hover {
+	background-color: blue;
+}
+.twitter-out:hover {
+	background-color: blue;
+}
+.youtube-out:hover {
+	background-color: red;
+}
+.instagram-out:hover {
+	background-color: purple;
 }
 
+
+/*
+	Outbound links
+*/
+.out-links {
+	text-align: right;
+	display: inline;
+	position: relative;
+	bottom: 0;
+	right: 0;
+	float: right;
+	height: 50px;
+	width: 50%;
+	line-height: 1.25;
+	font-size: 11px;
+	opacity: 0.9;
+}
+.out-links > a {
+	color: white;
+}
 
 /* 
 	Screen size media queries 
