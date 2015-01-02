@@ -22,16 +22,25 @@ $(document).ready(function() {
 		$('.content-music').css({'display':'none'});
 		$('.content-shows').css({'display':'none'})
 		$('.content-'+name).css({'display':'block'})
-	}
+	};
+
+	var createNewsCard = function(rawDate, content) {
+		var formatDate = rawDate.split(' ',4).join(' ');
+		return  '<div class="content-news-card">'+
+					'<div class="content-news-date">'+
+						formatDate +
+					'</div>'+
+					'<div class="content-news-main">'+
+						content +
+					'</div>'+
+				'</div>';
+	};
 
 
 	/* Button background functionality */
 
-	// Store current background photo
 	currName = 'news';
-
-	// Set mouseover image changes for buttons
-	// Set mousedown image changes for buttons
+	// Set mouseover/down image changes for buttons
 	$('.jr-btn').mouseover(function() {
 		changeBgPhoto(getName(this), true);
 	});
@@ -48,5 +57,11 @@ $(document).ready(function() {
 	/*
 		Handle the RSS feed here
 	*/
-	console.log(tumblr_api_read.posts);
+	if (tumblr_api_read.posts.length === 0) {
+		$('.content-news').append(createNewsCard('Apologies','<p style="text-align:center;font-size: 18px;">No news! Check back soon!</p>'));
+	} else {
+		tumblr_api_read.posts.forEach(function(post) {
+			$('.content-news').append(createNewsCard(post['date'],post['regular-body']));
+		});
+	}
 });
