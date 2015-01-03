@@ -43,17 +43,9 @@ $(document).ready(function() {
 	/* Check URL */
 
 	var exURL = document.URL.split('').reverse().join('').split('/',1).join('').split('').reverse().join('');
-	if (exURL === "#mailing") {
-		changeContent('mailing');
-	}
-	else if (exURL === "#news") {
-		changeContent('news');
-	}
-	else if (exURL === "#music") {
-		changeContent('music');
-	}
-	else if (exURL === "#shows") {
-		changeContent('shows');
+	console.log(exURL);
+	if (exURL.length !== 0) {
+		changeContent(exURL.replace('#',''));
 	}
 
 
