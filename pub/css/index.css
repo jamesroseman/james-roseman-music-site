@@ -252,6 +252,7 @@ body {
 }
 .out-links > a {
 	color: white;
+	cursor: pointer;
 }
 
 /* 
