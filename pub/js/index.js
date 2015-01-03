@@ -3,8 +3,17 @@ $(document).ready(function() {
 	/* Check if it's a mailing URL */
 
 	var exURL = document.URL.split('').reverse().join('').split('/',1).join('').split('').reverse().join('');
-	if (exURL === '#mailing') {
-		console.log('MAIL!!!');
+	if (exURL === "#mailing") {
+		changeContent('mailing');
+	} 
+	else if (exURL === "#news") {
+		changeContent('news');
+	}
+	else if (exURL === "#music") {
+		changeContent('music');
+	}
+	else if (exURL === "#shows") {
+		changeContent('shows');
 	}
 
 	/* Helper methods */
@@ -25,10 +34,13 @@ $(document).ready(function() {
 	};
 
 	var changeContent = function(name) {
+		window.history.pushState('','','/#'+name);
+		changeBgPhoto(name, false);
 		$('.content-news').css({'display':'none'});
 		$('.content-music').css({'display':'none'});
-		$('.content-shows').css({'display':'none'})
-		$('.content-'+name).css({'display':'block'})
+		$('.content-shows').css({'display':'none'});
+		$('.content-mailing').css({'display':'none'});
+		$('.content-'+name).css({'display':'block'});
 	};
 
 	var createNewsCard = function(rawDate, content) {
@@ -56,7 +68,6 @@ $(document).ready(function() {
 	});
 	// On click, change displayed content
 	$('.jr-btn').mouseup(function() {
-		changeBgPhoto(getName(this), false);
 		changeContent(getName(this));
 	});
 
@@ -66,7 +77,7 @@ $(document).ready(function() {
 	*/
 	$('#mailing-out').mouseup(function() {
 		// Change the URL
-		window.history.pushState('','','/#mailing');
+		changeContent('mailing');
 	});
 
 	/*
