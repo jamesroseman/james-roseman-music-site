@@ -57,11 +57,13 @@ $(document).ready(function() {
 	/*
 		Handle the RSS feed here
 	*/
-	if (tumblr_api_read.posts.length === 0) {
-		$('.content-news').append(createNewsCard('Apologies','<p style="text-align:center;font-size: 18px;">No news! Check back soon!</p>'));
-	} else {
-		tumblr_api_read.posts.forEach(function(post) {
-			$('.content-news').append(createNewsCard(post['date'],post['regular-body']));
-		});
-	}
+	$.getScript("http://jamesrosemanmusic.tumblr.com/api/read/json", function() {
+		if (tumblr_api_read.posts.length === 0) {
+			$('.content-news').append(createNewsCard('Apologies','<p style="text-align:center;font-size: 18px;">No news! Check back soon!</p>'));
+		} else {
+			tumblr_api_read.posts.forEach(function(post) {
+				$('.content-news').append(createNewsCard(post['date'],post['regular-body']));
+			});
+		}
+	});
 });
