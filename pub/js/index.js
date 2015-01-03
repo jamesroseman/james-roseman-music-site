@@ -3,7 +3,7 @@ $(document).ready(function() {
 	/* Check if it's a mailing URL */
 
 	var exURL = document.URL.split('').reverse().join('').split('/',1).join('').split('').reverse().join('');
-	if (exURL === 'mailing') {
+	if (exURL === '#mailing') {
 		console.log('MAIL!!!');
 	}
 
@@ -66,7 +66,7 @@ $(document).ready(function() {
 	*/
 	$('#mailing-out').mouseup(function() {
 		// Change the URL
-		window.history.pushState('','','/mailing');
+		window.history.pushState('','','/#mailing');
 	});
 
 	/*
