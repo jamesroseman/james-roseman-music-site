@@ -1,5 +1,12 @@
 $(document).ready(function() {
 
+	/* Check if it's a mailing URL */
+
+	var exURL = document.URL.split('').reverse().join('').split('/',1).join('').split('').reverse().join('');
+	if (exURL === 'mailing') {
+		console.log('MAIL!!!');
+	}
+
 	/* Helper methods */
 
 	var getName = function (btnObj) {
@@ -54,6 +61,14 @@ $(document).ready(function() {
 	});
 
 	
+	/*
+		Mailing link 
+	*/
+	$('#mailing-out').mouseup(function() {
+		// Change the URL
+		window.history.pushState('','','/mailing');
+	});
+
 	/*
 		Handle the RSS feed here
 	*/
