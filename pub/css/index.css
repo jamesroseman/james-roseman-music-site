@@ -211,20 +211,27 @@ body {
 	float: left;
 	width: 50px;
 	height: 50px;
-	background-color: black;
 	cursor: pointer;
+	opacity: 0.5;
+}
+.soc-media-out img {
+	width: 50px;
+	height: 50px;
+}
+.soc-media-out:hover {
+	opacity: 1;
 }
 .facebook-out:hover {
-	background-color: blue;
+	background-color: #3B5998;
 }
 .twitter-out:hover {
-	background-color: blue;
+	background-color: #4099FF;
 }
 .youtube-out:hover {
-	background-color: red;
+	background-color: #CD201F;
 }
 .instagram-out:hover {
-	background-color: purple;
+	background-color: #3F729B;
 }
 
 
@@ -287,11 +294,23 @@ body {
 	.main-content {
 		width: 300px;
 	}
+	.content-shows {
+		font-size: 11px;
+	}
 	/*
 		Footer
 	*/
 	.footer-content {
 		width: 300px;
+	}
+	.soc-media-out {
+		width: 37.5px;
+		height: 37.5px;
+		margin-bottom: 16.25px;
+	}
+	.soc-media-out img {
+		width: 37.5px;
+		height: 37.5px;
 	}
 }
 /* Height too small */
