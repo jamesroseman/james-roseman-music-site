@@ -1,21 +1,5 @@
 $(document).ready(function() {
 
-	/* Check if it's a mailing URL */
-
-	var exURL = document.URL.split('').reverse().join('').split('/',1).join('').split('').reverse().join('');
-	if (exURL === "#mailing") {
-		changeContent('mailing');
-	} 
-	else if (exURL === "#news") {
-		changeContent('news');
-	}
-	else if (exURL === "#music") {
-		changeContent('music');
-	}
-	else if (exURL === "#shows") {
-		changeContent('shows');
-	}
-
 	/* Helper methods */
 
 	var getName = function (btnObj) {
@@ -54,6 +38,23 @@ $(document).ready(function() {
 					'</div>'+
 				'</div>';
 	};
+
+
+	/* Check URL */
+
+	var exURL = document.URL.split('').reverse().join('').split('/',1).join('').split('').reverse().join('');
+	if (exURL === "#mailing") {
+		changeContent('mailing');
+	}
+	else if (exURL === "#news") {
+		changeContent('news');
+	}
+	else if (exURL === "#music") {
+		changeContent('music');
+	}
+	else if (exURL === "#shows") {
+		changeContent('shows');
+	}
 
 
 	/* Button background functionality */
