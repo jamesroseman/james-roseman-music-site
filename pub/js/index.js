@@ -18,8 +18,10 @@ $(document).ready(function() {
 	};
 
 	var changeContent = function(name) {
+		if (name !== 'mailing') {
+			changeBgPhoto(name, false);
+		}
 		window.history.pushState('','','/#'+name);
-		changeBgPhoto(name, false);
 		$('.content-news').css({'display':'none'});
 		$('.content-music').css({'display':'none'});
 		$('.content-shows').css({'display':'none'});
