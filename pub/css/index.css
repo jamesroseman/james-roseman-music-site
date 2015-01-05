@@ -155,6 +155,10 @@ body {
 .content-shows {
 	display: none;
 }
+.content-mailing {
+	display: none;
+	overflow-y: scroll;
+}
 .content-news-card {
 	margin-top: 30px;
 	margin-left: auto;
