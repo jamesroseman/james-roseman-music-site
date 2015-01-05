@@ -45,7 +45,6 @@ $(document).ready(function() {
 	/* Check URL */
 
 	var exURL = document.URL.split('').reverse().join('').split('/',1).join('').split('').reverse().join('');
-	console.log(exURL);
 	if (exURL.length !== 0) {
 		changeContent(exURL.replace('#',''));
 	}
