@@ -41,7 +41,7 @@ $(document).ready(function() {
 				'</div>';
 	};
 
-	var createNewsCardPhoto = function(rawDateg, photoUrl, caption) {
+	var createNewsCardPhoto = function(rawDate, photoUrl, caption) {
 		var formatDate = rawDate.split(' ',4).join(' ');
 		return  '<div class="content-news-card">'+
 					'<div class="content-news-date">'+
