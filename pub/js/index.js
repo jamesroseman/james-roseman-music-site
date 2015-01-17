@@ -47,7 +47,7 @@ $(document).ready(function() {
 					'<div class="content-news-date">'+
 						formatDate +
 					'</div>'+
-					'<div class="content-news-main">'+
+					'<div class="content-newsg-main">'+
 						'<a href="'+photoUrl+'" data-lightbox="'+photoUrl+'" data-title="'+caption+'">' +
 							'<img src="'+photoUrl+'" width="100%" height="auto"' +
 						'</a>' +
