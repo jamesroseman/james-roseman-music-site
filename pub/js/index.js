@@ -41,14 +41,14 @@ $(document).ready(function() {
 				'</div>';
 	};
 
-	var createNewsCardPhoto = function(rawDate, photoUrl, caption) {
+	var createNewsCardPhoto = function(rawDateg, photoUrl, caption) {
 		var formatDate = rawDate.split(' ',4).join(' ');
 		return  '<div class="content-news-card">'+
 					'<div class="content-news-date">'+
 						formatDate +
 					'</div>'+
 					'<div class="content-news-main">'+
-						'<a href="'+photoUrl+'" data-lightbox="'+photoUrl+'" data-title="'+caption+'"' +
+						'<a href="'+photoUrl+'" data-lightbox="'+photoUrl+'" data-title="'+caption+'">' +
 							'<img src="'+photoUrl+'" width="100%" height="auto"' +
 						'</a>' +
 					'</div>'+
