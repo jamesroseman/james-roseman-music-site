@@ -41,6 +41,20 @@ $(document).ready(function() {
 				'</div>';
 	};
 
+	var createNewsCardPhoto = function(rawData, photoUrl, caption) {
+		var formatDate = rawDate.split(' ',4).join(' ');
+		return  '<div class="content-news-card">'+
+					'<div class="content-news-date">'+
+						formatDate +
+					'</div>'+
+					'<div class="content-news-main">'+
+						'<a href="'+photoUrl+'" data-lightbox="'+photoUrl+'" data-title="'+caption+'"' +
+							'<img src="'+photoUrl+'" width="100%" height="auto"' +
+						'</a>' +
+					'</div>'+
+				'</div>';
+	};
+
 
 	/* Check URL */
 
@@ -78,11 +92,17 @@ $(document).ready(function() {
 		Handle the RSS feed here
 	*/
 	$.getScript("http://jamesrosemanmusic.tumblr.com/api/read/json", function() {
+		// If there are no posts
 		if (tumblr_api_read.posts.length === 0) {
 			$('.content-news').append(createNewsCard('Apologies','<p style="text-align:center;font-size: 18px;">No news! Check back soon!</p>'));
 		} else {
 			tumblr_api_read.posts.forEach(function(post) {
-				$('.content-news').append(createNewsCard(post['date'],post['regular-body']));
+				// If the post is a photo
+				if (post.type === "photo") {
+					$('.content-news').append(createNewsCardPhoto(post['date'],post['photo-url-1280'],post['photo-caption']));
+				} else {
+					$('.content-news').append(createNewsCard(post['date'],post['regular-body']));
+				}
 			});
 		}
 	});
